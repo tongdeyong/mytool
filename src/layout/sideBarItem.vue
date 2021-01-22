@@ -16,23 +16,31 @@
           <span>导航一</span>
         </template>
         <el-menu-item-group>
-          <template #title>分组一</template>
           <el-menu-item index="1-1">选项1</el-menu-item>
           <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
           <el-menu-item index="1-3">选项3</el-menu-item>
+          <el-menu-item index="1-4">选项4</el-menu-item>
+          <el-menu-item index="1-5">选项5</el-menu-item>
         </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template #title>选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
+        <el-submenu index="1-6">
+          <template #title>选项6</template>
+          <el-menu-item index="1-6-1">选项1</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu" />
-        <template #title>导航二</template>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
+      <el-submenu index="2">
+        <template #title>
+          <i class="el-icon-menu" />
+          <span>导航二</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="2-4">选项4</el-menu-item>
+          <el-menu-item index="2-5">选项5</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-menu-item index="3">
         <i class="el-icon-document" />
         <template #title>导航三</template>
       </el-menu-item>
@@ -53,7 +61,7 @@ export default {
   name: 'SideBarItem',
   data() {
     return {
-      isCollapse: true
+      isCollapse: false
     }
   },
   methods: {
