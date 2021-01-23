@@ -1,42 +1,22 @@
 <template>
-  <div class="leftSideBar">
-    <LogoSideBar />
-    <SideBarItem />
+  <div>
+    <Sidebar />
+    <AppMain />
   </div>
 </template>
 
 <script>
-import LogoSideBar from '@/layout/logoSideBar'
-import SideBarItem from '@/layout/sideBarItem'
+import AppMain from '@/layout/AppMain'
+import Sidebar from '@/layout/Sidebar'
 export default {
   name: 'Layout',
   components: {
-    LogoSideBar,
-    SideBarItem
-  },
-  methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath)
-    }
+    Sidebar,
+    AppMain
   }
 }
 </script>
 
 <style scoped>
- .leftSideBar {
-   transition: width 0.28s;
-   width: 200px !important;
-   background-color: #304156;
-   height: 100%;
-   position: fixed;
-   font-size: 0;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   z-index: 1001;
-   overflow: hidden;
- }
+
 </style>

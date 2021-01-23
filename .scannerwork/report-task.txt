@@ -1,0 +1,6 @@
+projectKey=mytool
+serverUrl=http://10.0.17.143:9000
+serverVersion=8.5.1.38104
+dashboardUrl=http://10.0.17.143:9000/dashboard?id=mytool
+ceTaskId=AXctVR7nrBMXsAgIJHto
+ceTaskUrl=http://10.0.17.143:9000/api/ce/task?id=AXctVR7nrBMXsAgIJHto

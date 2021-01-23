@@ -1,12 +1,20 @@
 const state = {
-  leftSiderbar: {
-    opened: 0
+  leftSideBar: {
+    opened: false
   }
 }
 
-const mutations = {}
+const mutations = {
+  TOGGLE_SIDEBAR: state => {
+    state.leftSideBar.opened = !state.leftSideBar.opened
+  }
+}
 
-const actions = {}
+const actions = {
+  toggleSideBar({ commit }) {
+    commit('TOGGLE_SIDEBAR')
+  }
+}
 
 export default {
   namespaced: true,

@@ -1,9 +1,8 @@
 <template>
   <div>
     <el-menu
-      default-active="1-4-1"
       class="el-menu-vertical-demo"
-      :collapse="isCollapse"
+      :collapse="leftSideBar.opened"
       background-color="#304156"
       text-color="rgb(191, 203, 217)"
       active-text-color="#ffd04b"
@@ -49,26 +48,29 @@
         <template #title>导航四</template>
       </el-menu-item>
     </el-menu>
-    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-      <el-radio-button :label="false">展开</el-radio-button>
-      <el-radio-button :label="true">收起</el-radio-button>
-    </el-radio-group>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'SideBarItem',
   data() {
     return {
-      isCollapse: false
+
     }
+  },
+  computed: {
+    ...mapGetters(['leftSideBar'])
   },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath)
+      console.log('打开')
     },
     handleClose(key, keyPath) {
+      console.log('关闭')
       console.log(key, keyPath)
     }
   }
@@ -79,5 +81,8 @@ export default {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
+}
+.el-menu {
+  border-right: solid 1px #304156;
 }
 </style>
